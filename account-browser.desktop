@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Account Browser
+Comment=Изолированные сессии для разных аккаунтов
+Exec=python3 /home/orbitum/Work/IAm/MEs/LLLLL/main.py
+Icon=/home/orbitum/Work/IAm/MEs/LLLLL/assets/icon.png
+Terminal=false
+Categories=Network;WebBrowser;
