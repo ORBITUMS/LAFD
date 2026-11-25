@@ -1,33 +1,34 @@
-# Account Browser
-
-A minimalist browser organizer for Linux built with **GTK 4** and **WebKitGTK 6.0**, featuring completely isolated sessions.
-
-Each session stores its own cookies, cache, and site data in a separate folder — allowing you to stay logged into multiple Google accounts, AI tools, or work profiles simultaneously without constantly signing out and back in.
-
-## Features
-
-- **Isolated Sessions** — separate cookie and cache storage for each profile.
-- **Per-Session Proxies** — individual `http://` and `socks5://` proxy settings via the right-click context menu.
-
-## Keyboard Shortcuts
-
-| Shortcut                             | Action                      |
-| :----------------------------------- | :-------------------------- |
-| `Ctrl + T`                           | Create a new session        |
-| `Ctrl + L`                           | Focus the address bar       |
-| `Ctrl + R` / `F5`                    | Reload / stop loading page  |
-| `Alt + ←` / `Alt + →`                | Back / Forward              |
-| `Ctrl + 1..9`                        | Switch to session by number |
-| `Ctrl + +` / `Ctrl + -` / `Ctrl + 0` | Page zoom                   |
-| `Ctrl + ,`                           | Open settings               |
-
 ## Installation and Launch
 
-### 1. System Dependencies (Ubuntu / Debian)
+### Option 1: Prebuilt Release (Ubuntu 24.04+ / Debian)
 
-```bash
-sudo apt install python3-gi python3-gi-cairo gir1.2-gtk-4.0 gir1.2-webkit-6.0
-git clone <repository-url>
-cd <project-folder>
-python3 main.py
-```
+1. Install required system libraries:
+   ```bash
+   sudo apt install gir1.2-gtk-4.0 gir1.2-webkit-6.0 glib-networking
+   ```
+2. Download the latest -AccountBrowser-linux.tar.gz- from the **Releases** page and extract it:
+   ```bash
+   tar -xzf AccountBrowser-linux.tar.gz
+   cd AccountBrowser
+   ```
+3. Run the browser directly:
+   ```bash
+   ./AccountBrowser
+   ```
+   Or add it to your application menu:
+   ```bash
+   ./install.sh
+   ```
+
+### Option 2: Run from Source
+
+1. Install system dependencies (Ubuntu / Debian):
+   ```bash
+   sudo apt install python3-gi python3-gi-cairo gir1.2-gtk-4.0 gir1.2-webkit-6.0 glib-networking
+   ```
+2. Clone the repository and launch:
+   ```bash
+   git clone <repository-url>
+   cd <project-folder>
+   python3 main.py
+   ```

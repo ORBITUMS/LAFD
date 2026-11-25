@@ -3,6 +3,7 @@ import os
 import sys
 
 if getattr(sys, "frozen", False):
+    os.environ.setdefault("WEBKIT_DISABLE_SANDBOX_THIS_IS_DANGEROUS", "1")
     for gio_dir in (
         "/usr/lib/x86_64-linux-gnu/gio/modules",
         "/usr/lib/aarch64-linux-gnu/gio/modules",
