@@ -1,38 +1,33 @@
 # Account Browser
 
-Минималистичный браузер-органайзер для Linux на базе **GTK 4** и **WebKitGTK 6.0** с полностью изолированными сессиями.
+A minimalist browser organizer for Linux built with **GTK 4** and **WebKitGTK 6.0**, featuring completely isolated sessions.
 
-Каждая сессия хранит свои куки, кэш и данные сайтов в отдельной папке — можно одновременно держать несколько Google-аккаунтов, нейросетей или рабочих профилей без постоянного перелогина.
+Each session stores its own cookies, cache, and site data in a separate folder — allowing you to stay logged into multiple Google accounts, AI tools, or work profiles simultaneously without constantly signing out and back in.
 
-## Возможности
+## Features
 
-- **Изолированные сессии** — отдельные хранилища куки и кэша для каждого профиля.
-- **Прокси на каждую сессию** — индивидуальные настройки `http://` / `socks5://` через ПКМ-меню.
-- **Сон вкладок и счётчик RAM** — выгрузка неактивных сессий из памяти и отображение потребления ОЗУ в реальном времени.
-- **Плавающая стеклянная панель** — горизонтальный и вертикальный режимы, живое перетаскивание вкладок, опциональное автоскрытие.
-- **Индикаторы активности** — цветовая подсветка активной, недавних и спящих сессий.
-- **Масштаб для каждой сессии** — запоминается отдельно (`Ctrl +`, `Ctrl -`, `Ctrl 0`).
-- **Темы и языки** — тёмная и светлая темы, интерфейс на русском, английском и XD.
+- **Isolated Sessions** — separate cookie and cache storage for each profile.
+- **Per-Session Proxies** — individual `http://` and `socks5://` proxy settings via the right-click context menu.
 
-## Горячие клавиши
+## Keyboard Shortcuts
 
-| Комбинация                           | Действие                          |
-| :----------------------------------- | :-------------------------------- |
-| `Ctrl + T`                           | Создать новую сессию              |
-| `Ctrl + L`                           | Фокус на адресную строку          |
-| `Ctrl + R` / `F5`                    | Обновить / остановить страницу    |
-| `Alt + ←` / `Alt + →`                | Назад / Вперёд                    |
-| `Ctrl + 1..9`                        | Переключиться на сессию по номеру |
-| `Ctrl + +` / `Ctrl + -` / `Ctrl + 0` | Масштаб страницы                  |
-| `Ctrl + ,`                           | Открыть настройки                 |
+| Shortcut                             | Action                      |
+| :----------------------------------- | :-------------------------- |
+| `Ctrl + T`                           | Create a new session        |
+| `Ctrl + L`                           | Focus the address bar       |
+| `Ctrl + R` / `F5`                    | Reload / stop loading page  |
+| `Alt + ←` / `Alt + →`                | Back / Forward              |
+| `Ctrl + 1..9`                        | Switch to session by number |
+| `Ctrl + +` / `Ctrl + -` / `Ctrl + 0` | Page zoom                   |
+| `Ctrl + ,`                           | Open settings               |
 
-## Установка и запуск
+## Installation and Launch
 
-### 1. Системные зависимости (Ubuntu / Debian)
+### 1. System Dependencies (Ubuntu / Debian)
 
 ```bash
 sudo apt install python3-gi python3-gi-cairo gir1.2-gtk-4.0 gir1.2-webkit-6.0
-git clone <url-репозитория>
-cd <папка-проекта>
+git clone <repository-url>
+cd <project-folder>
 python3 main.py
 ```
