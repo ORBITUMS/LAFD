@@ -496,4 +496,8 @@ popover.glass-popover.light .ram-badge {
     color: rgba(0, 0, 0, 0.5);
     background-color: rgba(0, 0, 0, 0.05);
 }
+/* Подсветка окна при перетаскивании файла */
+.file-drop-active {
+    box-shadow: inset 0 0 0 3px rgba(10, 132, 255, 0.75);
+}
 """

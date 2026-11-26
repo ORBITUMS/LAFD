@@ -170,19 +170,21 @@ class MainWindow(Gtk.ApplicationWindow):
         is_ctrl = bool(state & Gdk.ModifierType.CONTROL_MASK)
         is_alt = bool(state & Gdk.ModifierType.ALT_MASK)
 
-        if keyval == Gdk.KEY_F5 or (is_ctrl and keyval in (Gdk.KEY_r, Gdk.KEY_R)):
+        if keyval == Gdk.KEY_F5 or (
+            is_ctrl and keyval in (Gdk.KEY_r, Gdk.KEY_R, Gdk.KEY_Cyrillic_ka, Gdk.KEY_Cyrillic_KA)
+        ):
             self._on_reload(None)
             return True
-        if is_ctrl and keyval in (Gdk.KEY_l, Gdk.KEY_L):
+        if is_ctrl and keyval in (Gdk.KEY_l, Gdk.KEY_L, Gdk.KEY_Cyrillic_de, Gdk.KEY_Cyrillic_DE):
             if self.top_bar.get_visible() and self.search_entry.get_sensitive():
                 self.search_entry.grab_focus()
                 self.search_entry.select_region(0, -1)
             return True
-        if is_ctrl and keyval in (Gdk.KEY_t, Gdk.KEY_T):
+        if is_ctrl and keyval in (Gdk.KEY_t, Gdk.KEY_T, Gdk.KEY_Cyrillic_ie, Gdk.KEY_Cyrillic_IE):
             self.footer_revealer.set_reveal_child(True)
             self._on_plus_clicked(self.plus_button)
             return True
-        if is_ctrl and keyval == Gdk.KEY_comma:
+        if is_ctrl and keyval in (Gdk.KEY_comma, Gdk.KEY_Cyrillic_be, Gdk.KEY_Cyrillic_BE):
             self._open_settings()
             return True
         if is_ctrl and keyval in (Gdk.KEY_plus, Gdk.KEY_equal, Gdk.KEY_KP_Add):
